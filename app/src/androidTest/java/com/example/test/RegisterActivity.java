@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText join_email, join_password, join_name,join_job, join_pwck;
+    private EditText join_email, join_password, join_name, join_job, join_pwck;
     private Button join_button, check_button;
     private AlertDialog dialog;
     private boolean validate = false;
@@ -152,7 +152,7 @@ public class RegisterActivity extends AppCompatActivity {
                 };
 
                 //서버로 Volley를 이용해서 요청
-                RegisterRequest registerRequest = new RegisterRequest( UserEmail, UserPwd, UserName, responseListener);
+                RegisterRequest registerRequest = new RegisterRequest( UserEmail, UserPwd, UserName,UserJob, responseListener);
                 RequestQueue queue = Volley.newRequestQueue( RegisterActivity.this );
                 queue.add( registerRequest );
             }
