@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText join_email, join_password, join_name, join_pwck;
+    private EditText join_email, join_password, join_name,join_job, join_pwck;
     private Button join_button, check_button;
     private AlertDialog dialog;
     private boolean validate = false;
@@ -96,6 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
                 final String UserEmail = join_email.getText().toString();
                 final String UserPwd = join_password.getText().toString();
                 final String UserName = join_name.getText().toString();
+                final String UserJob = join_job.getText().toString();
                 final String PassCk = join_pwck.getText().toString();
 
 

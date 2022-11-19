@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         join_button.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( LoginActivity.this, MainActivity.class );
+                Intent intent = new Intent( LoginActivity.this, RegisterActivity.class );
                 startActivity( intent );
             }
         });
@@ -58,13 +58,15 @@ public class LoginActivity extends AppCompatActivity {
                                 String UserEmail = jsonObject.getString( "UserEmail" );
                                 String UserPwd = jsonObject.getString( "UserPwd" );
                                 String UserName = jsonObject.getString( "UserName" );
+                                String UserJob = jsonObject.getString("UserJob");
 
                                 Toast.makeText( getApplicationContext(), String.format("%s님 환영합니다.", UserName), Toast.LENGTH_SHORT ).show();
-                                Intent intent = new Intent( LoginActivity.this, MainActivity.class );
+                                Intent intent = new Intent( LoginActivity.this, RegisterActivity.class );
 
                                 intent.putExtra( "UserEmail", UserEmail );
                                 intent.putExtra( "UserPwd", UserPwd );
                                 intent.putExtra( "UserName", UserName );
+                                intent.putExtra("UserJob", UserJob);
 
                                 startActivity( intent );
 
